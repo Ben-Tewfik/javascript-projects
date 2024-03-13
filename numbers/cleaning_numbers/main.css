@@ -53,3 +53,23 @@ i {
 .item .fa-bullhorn {
   color: tomato;
 }
+@media screen and (min-width: 850px) {
+  .cleaning-numbers-container {
+    grid-template-rows: auto auto;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  h2 {
+    grid-column-start: 1;
+    grid-column-end: 6;
+  }
+}
+/* @media screen and (min-width: 449px) {
+  .cleaning-numbers-container {
+    grid-template-rows: auto auto auto;
+    grid-template-columns: repeat(5, 33%);
+  }
+  h2 {
+    grid-column-start: 1;
+    grid-column-end: 6;
+  }
+} */
