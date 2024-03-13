@@ -1,0 +1,55 @@
+:root {
+  --bg-clr: #efefef;
+  --main-clr: #f6f9fd;
+  --mainWhite: #fff;
+}
+body {
+  background-color: var(--bg-clr);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+}
+.cleaning-numbers-container {
+  background-color: var(--main-clr);
+  margin-top: 2rem;
+  padding: 2rem 1rem;
+  display: grid;
+  gap: 0.8rem;
+}
+h2 {
+  text-transform: capitalize;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+.item {
+  background-color: var(--mainWhite);
+  border-radius: 0.5rem;
+  text-align: left;
+  padding: 1rem;
+}
+.item span {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.item p {
+  text-transform: capitalize;
+}
+.item .fa-heart {
+  color: tomato;
+}
+.item .fa-clock {
+  color: dodgerblue;
+}
+.item .fa-gem {
+  color: dodgerblue;
+}
+.item .fa-face-smile-beam {
+  color: yellow;
+}
+.item .fa-bullhorn {
+  color: tomato;
+}
