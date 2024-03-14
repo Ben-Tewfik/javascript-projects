@@ -1,0 +1,27 @@
+:root {
+  --darkClr: #000;
+  --witheClr: #fff;
+}
+
+.dark-theme {
+  --darkClr: #fff;
+  --whiteClr: #000;
+}
+
+.nav-container {
+  width: 90vw;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-between;
+}
+h1 {
+  text-transform: capitalize;
+  color: var(--darkClr);
+}
+body {
+  background-color: var(--whiteClr);
+  transition: all 0.5 ease-in-out;
+}
+p {
+  color: var(--darkClr);
+}
