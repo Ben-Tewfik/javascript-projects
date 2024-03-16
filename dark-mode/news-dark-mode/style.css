@@ -25,3 +25,18 @@ body {
 p {
   color: var(--darkClr);
 }
+/* .toggle-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+.toggle-btn .sun {
+  display: none;
+}
+
+.toggle-btn .moon {
+  display: none;
+}
+/* .toggle-btn .sun {
+  display: inline-block;
+} */
