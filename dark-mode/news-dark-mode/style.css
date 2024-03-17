@@ -25,11 +25,16 @@ body {
 p {
   color: var(--darkClr);
 }
-/* .toggle-btn {
-  display: flex;
+.toggle-btn {
+  background: #ccc;
+  border: none;
+  border-radius: 50%;
+  height: 1.7rem;
+  width: 1.7rem;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
-} */
+  align-items: center; */
+}
 .toggle-btn .sun {
   display: none;
 }
@@ -37,6 +42,3 @@ p {
 .toggle-btn .moon {
   display: none;
 }
-/* .toggle-btn .sun {
-  display: inline-block;
-} */
