@@ -2,12 +2,14 @@
   --darkClr: #282c35;
   --witheClr: #fff;
   --mainClr: #d23669;
+  --greyClr: #64748b;
 }
 
 .dark-theme {
   --darkClr: #fff;
   --whiteClr: #282c35;
   --mainClr: #d23669;
+  --greyClr: #64748b;
 }
 
 body {
@@ -58,6 +60,15 @@ body {
 }
 .description {
   color: var(--darkClr);
+}
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.tags span {
+  text-transform: capitalize;
+  color: var(--greyClr);
 }
 /* toggle btn */
 .toggle-btn {
