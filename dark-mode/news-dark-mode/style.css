@@ -72,8 +72,8 @@ body {
 }
 /* toggle btn */
 .toggle-btn {
-  background: #ccc;
   border: none;
+  background: #ccc;
   border-radius: 50%;
   height: 1.7rem;
   width: 1.7rem;
