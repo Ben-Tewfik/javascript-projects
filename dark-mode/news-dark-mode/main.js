@@ -15,9 +15,14 @@ toggleBtn.addEventListener("click", e => {
 });
 
 async function fetchPosts() {
-  const response = await fetch(url);
-  const { posts: data } = await response.json();
-  return data;
+  postsContainer.innerHTML = `<div class='loading'></div>`;
+  try {
+    const response = await fetch(url);
+    const { posts: data } = await response.json();
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 function displayPosts(posts) {
