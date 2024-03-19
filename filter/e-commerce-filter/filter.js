@@ -28,12 +28,7 @@ function displayProducts() {
   }
 }
 
-async function display() {
-  const data = await fetchProducts(url);
-  displayProducts();
-}
-
-display();
+displayProducts();
 
 // search
 form.addEventListener("keyup", e => {
@@ -51,17 +46,33 @@ form.addEventListener("keyup", e => {
 });
 
 // display unique categories
-const uniqueCategories = [
-  "all",
-  ...new Set(products.map(product => product.category)),
-];
 function displayCategories() {
+  const uniqueCategories = [
+    "all",
+    ...new Set(products.map(product => product.category)),
+  ];
   const categories = uniqueCategories
     .map(category => {
-      return ` <button class="btn">${category}</button>`;
+      return ` <button class="btn" data-category='${category}'>${category}</button>`;
     })
     .join("");
   btns.innerHTML = categories;
 }
 
 displayCategories();
+
+// filter categories
+btns.addEventListener("click", e => {
+  const category = e.target.dataset.category;
+  if (e.target.classList.contains("btn")) {
+    if (category === "all") {
+      filteredProducts = [...products];
+    } else {
+      filteredProducts = products.filter(
+        product => product.category === category
+      );
+      search.value = "";
+    }
+  }
+  displayProducts();
+});
