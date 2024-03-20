@@ -13,12 +13,14 @@ function displayProducts() {
   if (filteredProducts.length > 0) {
     const allProducts = filteredProducts
       .map(product => {
-        const { title, price, thumbnail: img, images } = product;
+        const { id, title, price, thumbnail: img, images } = product;
         return `<div class="single-product">
+      <a href='product.html?id=${id}' class='link'>
           <img src=${img} alt=${title} class="img" />
       <h2 class="product-title">${title}</h2>
       <p class="product-price">$${price}</p>
       </div>
+      </a>
       </div>`;
       })
       .join("");
