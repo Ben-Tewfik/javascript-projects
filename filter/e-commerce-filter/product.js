@@ -4,10 +4,14 @@ async function fetchSingleProduct() {
   const query = window.location.search;
   const params = new URLSearchParams(query);
   const id = params.get("id");
-  const response = await fetch(`${url}${id}`);
-  const data = await response.json();
-  console.log(data);
-  return data;
+  singleProductContainer.innerHTML = `<div class="loading"></div>`;
+  try {
+    const response = await fetch(`${url}${id}`);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    singleProductContainer.innerHTML = `<p class='error'>There was a problem loading the product. Please try again later.</p>`;
+  }
 }
 async function displaySingleProduct(product) {
   const { brand, description, thumbnail: img, price, title } = product;

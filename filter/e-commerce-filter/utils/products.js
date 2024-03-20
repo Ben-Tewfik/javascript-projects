@@ -1,7 +1,7 @@
 const productsContainer = document.querySelector(".products-container");
 
 export async function fetchProducts(url) {
-  productsContainer.innerHTML = `<div class="loading">loading</div>`;
+  productsContainer.innerHTML = `<div class="loading"></div>`;
   try {
     const response = await fetch(url);
     const { products } = await response.json();
