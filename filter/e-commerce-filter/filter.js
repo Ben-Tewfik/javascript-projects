@@ -13,11 +13,12 @@ function displayProducts() {
   if (filteredProducts.length > 0) {
     const allProducts = filteredProducts
       .map(product => {
-        const { id, title, price, thumbnail: img, images } = product;
+        const { id, title, price, thumbnail: img, images, rating } = product;
         return `<div class="single-product">
       <a href='product.html?id=${id}' class='link'>
           <img src=${img} alt=${title} class="img" />
       <h2 class="product-title">${title}</h2>
+      <p class='product-rating'>${displayRating(rating)}</p>
       <p class="product-price">$${price}</p>
       </div>
       </a>
@@ -40,9 +41,6 @@ form.addEventListener("keyup", e => {
     if (product.title.toLowerCase().includes(searchValue.toLowerCase())) {
       return product.title;
     }
-    // if (searchValue === "") {
-    //   return filteredProducts;
-    // }
   });
   displayProducts();
 });
@@ -78,3 +76,20 @@ btns.addEventListener("click", e => {
   }
   displayProducts();
 });
+
+// display rating
+function displayRating(number) {
+  let rating = Math.round(number * 2) / 2;
+  let output = [];
+  for (let i = rating - 1; i >= 0; i--) {
+    console.log(i);
+    output.push(`<i class="fa-solid fa-star"></i>`);
+    if (i == 0.5) {
+      output.push(`<i class="fa-solid fa-star-half-stroke"></i>`);
+    }
+  }
+  for (let i = 5 - rating; i >= 1; i--) {
+    output.push(`<i class="fa-regular fa-star"></i>`);
+  }
+  return output.join("");
+}
