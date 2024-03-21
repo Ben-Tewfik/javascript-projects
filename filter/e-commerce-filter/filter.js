@@ -82,7 +82,6 @@ function displayRating(number) {
   let rating = Math.round(number * 2) / 2;
   let output = [];
   for (let i = rating - 1; i >= 0; i--) {
-    console.log(i);
     output.push(`<i class="fa-solid fa-star"></i>`);
     if (i == 0.5) {
       output.push(`<i class="fa-solid fa-star-half-stroke"></i>`);
