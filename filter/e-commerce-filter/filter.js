@@ -13,16 +13,20 @@ function displayProducts() {
   if (filteredProducts.length > 0) {
     const allProducts = filteredProducts
       .map(product => {
-        const { id, title, price, thumbnail: img, images, rating } = product;
-        return `<div class="single-product">
+        const { id, title, price, thumbnail: img, rating, brand } = product;
+        return `
       <a href='product.html?id=${id}' class='link'>
           <img src=${img} alt=${title} class="img" />
-      <h2 class="product-title">${title}</h2>
-      <p class='product-rating'>${displayRating(rating)}</p>
-      <p class="product-price">$${price}</p>
+          <footer class='product-footer'>
+          <h2 class="product-title">${title}</h2>
+          <p class='product-brand'>${brand}</p>
+          <p class='product-rating'>${displayRating(rating)}</p>
+          <p class="product-price">$${price}.99</p>
+          </footer>
+      
       </div>
       </a>
-      </div>`;
+      `;
       })
       .join("");
     productsContainer.innerHTML = allProducts;
