@@ -1,0 +1,86 @@
+:root {
+  --mainBlack: #2c2e31;
+  --mainWhite: #fff;
+  --whiteBg: #f9f9f9;
+  --grey: #999;
+  --hoverClr: #83ba43;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.black-container {
+  background: var(--mainBlack);
+  height: 400px;
+  padding: 60px 0 0;
+  text-align: center;
+}
+.black-container h1 {
+  color: var(--mainWhite);
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 400;
+}
+.card {
+  max-width: 730px;
+  background-color: var(--mainWhite);
+  margin: auto;
+  margin-top: -200px;
+  padding: 20px 0;
+  position: relative;
+  border-radius: 3px;
+  text-align: center;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 750px) {
+  .card {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 130px;
+  top: 0;
+  left: 0;
+  background-color: var(--whiteBg);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.img {
+  position: relative;
+  margin: auto;
+  width: 150px;
+  height: 150px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  padding: 5px;
+  background: var(--mainWhite);
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+.title {
+  color: var(--grey);
+  font-size: 18px;
+}
+.value {
+  font-size: 38px;
+  text-transform: capitalize;
+  color: var(--mainBlack);
+  margin: 5px;
+}
+.icon {
+  background: none;
+  border: none;
+  color: #999;
+  margin: 20px;
+  font-size: 35px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.active {
+  color: var(--hoverClr);
+}
