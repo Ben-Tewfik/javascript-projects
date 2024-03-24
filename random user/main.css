@@ -84,3 +84,28 @@ body {
 .active {
   color: var(--hoverClr);
 }
+.img-container {
+  position: relative;
+}
+.random-btn {
+  position: absolute;
+  /* change the top for the animation */
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 15px;
+  border: none;
+  background: rgba(0, 0, 0, 0.75);
+  color: var(--mainWhite);
+  text-transform: capitalize;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+.random-btn:hover {
+  background-color: var(--mainBlack);
+}
+.img-container:hover .random-btn {
+  opacity: 1;
+}
