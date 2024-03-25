@@ -81,6 +81,9 @@ body {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
+.icon:hover {
+  color: var(--hoverClr);
+}
 .active {
   color: var(--hoverClr);
 }
@@ -89,10 +92,9 @@ body {
 }
 .random-btn {
   position: absolute;
-  /* change the top for the animation */
-  top: 80%;
+  bottom: 10px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   padding: 10px 15px;
   border: none;
   background: rgba(0, 0, 0, 0.75);
@@ -107,5 +109,6 @@ body {
   background-color: var(--mainBlack);
 }
 .img-container:hover .random-btn {
+  bottom: 20px;
   opacity: 1;
 }
