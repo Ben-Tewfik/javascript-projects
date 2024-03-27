@@ -1,14 +1,18 @@
 import get from "./getElement.js";
+import { hideLoading } from "./toggleLoading.js";
+
 const mealsContainer = get(".meals-container");
-console.log(mealsContainer);
+const title = get(".title");
 function displayMeals(meals) {
+  if (!meals) {
+    hideLoading();
+    title.textContent = "sorry, no meal was found";
+    mealsContainer.innerHTML = null;
+    return;
+  }
   const newMeals = meals
     .map(meal => {
       const { idMeal: id, strMeal: title, strMealThumb: img } = meal;
-      // if (title.length > 25) {
-      //   let newTitle = title.slice(0, 25);
-      // }
-
       return `<a href="#" class="meal-link">
         <article class="meal-container">
           <img
@@ -24,6 +28,8 @@ function displayMeals(meals) {
       </a>`;
     })
     .join("");
+  hideLoading();
+  title.textContent = "";
   mealsContainer.innerHTML = newMeals;
 }
 export default displayMeals;
