@@ -6,6 +6,9 @@
   --darkClr: #222;
   --whiteClr: #fff;
   --greyClr: #102a42;
+  --descClr: #617d98;
+  --btnClr: #49a6e9;
+  --darkBtnClr: #063251;
   --mainFont: "Roboto", sans-serif;
   --mainTransition: all 0.3s ease-in-out;
   --letterSpacing: 3px;
@@ -110,5 +113,60 @@ body {
 @media screen and (min-width: 992px) {
   .meals-container {
     width: 95vw;
+  }
+}
+
+/* single meal */
+.single-meal {
+  width: 85vw;
+  max-width: 1170px;
+  margin: 4rem auto;
+}
+.single-meal-img {
+  display: block;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border: 0.7rem solid var(--whiteClr);
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.single-meal-info {
+  padding: 2rem 0;
+}
+.single-meal-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+.single-meal-desc {
+  margin-bottom: 1.5rem;
+  color: var(--descClr);
+}
+.single-meal-btn {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: var(--btnClr);
+  color: var(--whiteClr);
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  margin-top: 2rem;
+  transition: var(--mainTransition);
+}
+.single-meal-btn:hover {
+  color: var(--btnClr);
+  background-color: var(--darkBtnClr);
+}
+@media screen and (min-width: 768px) {
+  .single-meal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .single-meal {
+    gap: 2rem;
   }
 }
