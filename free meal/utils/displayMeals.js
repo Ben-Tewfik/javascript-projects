@@ -13,7 +13,7 @@ function displayMeals(meals) {
   const newMeals = meals
     .map(meal => {
       const { idMeal: id, strMeal: title, strMealThumb: img } = meal;
-      return `<a href="#" class="meal-link">
+      return `<a href="singleMeal.html" class="meal-link">
         <article class="meal-container">
           <img
             src=${img}
