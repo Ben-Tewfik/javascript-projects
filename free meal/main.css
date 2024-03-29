@@ -187,6 +187,10 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+  .single-meal-loading {
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
 }
 @media screen and (min-width: 992px) {
   .single-meal {

@@ -1,19 +1,9 @@
 import get from "./getElement.js";
 
-const title = get(".single-meal-title");
-const img = get(".single-meal-img");
-const description = get(".single-meal-desc");
-const ingredients = get(".single-meal-ingredients");
+const mealSection = get(".single-meal");
 
 function displaySingleMeal(meal) {
-  console.log(meal);
-  const {
-    strMeal: name,
-    strMealThumb: image,
-    strInstructions: desc,
-    strYoutube: video,
-  } = meal;
-
+  const { strMeal: name, strMealThumb: image, strInstructions: desc } = meal;
   let ingredientsArr = [];
   for (let i = 0; i <= 20; i++) {
     let ingredient = meal[`strIngredient${i}`];
@@ -22,15 +12,22 @@ function displaySingleMeal(meal) {
       ingredientsArr.push(`${measure} ${ingredient}`);
     }
   }
-  ingredients.innerHTML = ingredientsArr
+  const ingredients = ingredientsArr
     .map(ingredient => {
       return `<li>
       <i class="fa-solid fa-square-check check-icon"></i>
       ${ingredient}</li>`;
     })
     .join("");
-  img.src = image;
-  title.textContent = name;
-  description.textContent = desc;
+  mealSection.innerHTML = `<img src=${image} alt=${name} class="single-meal-img" />
+  <div class="single-meal-info">
+    <h2 class="single-meal-title">${name}</h2>
+    <ul class="single-meal-ingredients">${ingredients}</ul>
+    <a href="index.html" class="single-meal-btn">all meals</a>
+  </div>
+  <div class="single-meal-desc-container">
+    <h2>How to Make it</h2>
+    <p class="single-meal-desc">${desc}</p>
+  </div>`;
 }
 export default displaySingleMeal;
