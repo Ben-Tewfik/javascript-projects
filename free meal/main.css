@@ -139,9 +139,22 @@ body {
   margin-bottom: 1rem;
   text-transform: capitalize;
 }
+.single-meal-ingredients {
+  list-style: none;
+  color: var(--descClr);
+  line-height: 1.5;
+}
+.check-icon {
+  color: var(--btnClr);
+  margin-right: 0.5rem;
+}
 .single-meal-desc {
   margin-bottom: 1.5rem;
   color: var(--descClr);
+  line-height: 1.8;
+}
+.single-meal-desc-container h2 {
+  margin-bottom: 1rem;
 }
 .single-meal-btn {
   display: inline-block;
@@ -158,11 +171,21 @@ body {
   color: var(--btnClr);
   background-color: var(--darkBtnClr);
 }
+
 @media screen and (min-width: 768px) {
   .single-meal {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 1rem;
+  }
+  .single-meal-desc-container {
+    padding: 1rem;
+    grid-column: 1/3;
+  }
+  .single-meal-ingredients {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 @media screen and (min-width: 992px) {
