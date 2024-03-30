@@ -12,6 +12,7 @@ function displaySingleMeal(meal) {
       ingredientsArr.push(`${measure} ${ingredient}`);
     }
   }
+  document.title = name;
   const ingredients = ingredientsArr
     .map(ingredient => {
       return `<li>
