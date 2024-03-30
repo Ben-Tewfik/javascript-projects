@@ -1,0 +1,32 @@
+.slideshow-container {
+  width: 100vw;
+  height: 50vh;
+  position: relative;
+  border: 2px solid red;
+}
+.slide .slide-img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+.slide {
+  display: none;
+}
+.next,
+.prev {
+  position: absolute;
+  top: 0;
+  font-size: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  cursor: pointer;
+}
+.next {
+  right: 0;
+  padding-right: 0.5rem;
+}
+.prev {
+  padding-left: 0.5rem;
+}
