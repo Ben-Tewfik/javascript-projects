@@ -1,3 +1,7 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
 .slideshow-container {
   width: 95vw;
   max-width: 1320px;
@@ -61,12 +65,52 @@
 .dot:hover {
   background-color: #79c142;
 }
+.slide-info {
+  display: none;
+}
 
 @keyframes fade {
   from {
     opacity: 0.4;
   }
   to {
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .slide-info {
+    display: block;
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 3rem 2rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: all 0.3s ease-in-out;
+    border-radius: 0.5rem;
+    opacity: 0;
+  }
+  .slide-info .title {
+    text-transform: capitalize;
+  }
+  .slide-info .desc {
+    max-width: 400px;
+  }
+  .slide-btn {
+    background-color: #79c142;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    text-transform: capitalize;
+  }
+  .slideshow-container:hover .slide-info {
     opacity: 1;
   }
 }
