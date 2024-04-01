@@ -36,3 +36,4 @@ const movies = [
       "By 1993, Ted the foul-mouthed teddy bear's moment of fame has passed. He's moved back in with his best friend, likable but awkward 16-year-old John Bennett, who lives in a working-class Boston home with his parents, Matty and Susan, and cousin Blaire. Matty's a blustering, blue-collar Bostonian who thinks he's the unequivocal boss of the house and doesn't like anyone challenging him, particularly his liberal-minded niece. Susan is kind, selfless and almost pathologically sweet when it comes to caring for her family. Blaire is a smart and politically correct college student who's not afraid to speak her mind and frequently clashes with her more traditionalist family.",
   },
 ];
+export default movies;

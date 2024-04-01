@@ -4,7 +4,13 @@ const next = get(".next");
 const prev = get(".prev");
 const slides = [...document.querySelectorAll(".slide")];
 const dots = [...document.querySelectorAll(".dot")];
-
+const descriptions = [...document.querySelectorAll(".desc")];
+descriptions.forEach(element => {
+  if (element.innerHTML.length > 150) {
+    let newDesc = element.textContent.slice(0, 149);
+    element.textContent = `${newDesc}...`;
+  }
+});
 let indexElement = 1;
 showSlide(indexElement);
 
@@ -28,7 +34,6 @@ function changeDot(n) {
   showSlide((indexElement = n));
 }
 function showSlide(n) {
-  console.log(n);
   if (n > slides.length) {
     indexElement = 1;
   }
