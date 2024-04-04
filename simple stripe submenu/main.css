@@ -1,0 +1,37 @@
+:root {
+  --blackClr: #222;
+  --whiteClr: #fff;
+  --mainTransition: all 0.3s ease-in-out;
+}
+
+.nav {
+  height: 5rem;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-center {
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-links,
+.sign-btn {
+  display: none;
+}
+.btn {
+  background-color: var(--blackClr);
+  color: var(--whiteClr);
+  cursor: pointer;
+  transition: var(--mainTransition);
+}
+.toggle-btn {
+  padding: 0.3rem 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+.toggle-btn:hover {
+  opacity: 0.7;
+}
