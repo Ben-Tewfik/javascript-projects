@@ -88,3 +88,9 @@ body {
 .links-container a i {
   margin-right: 1rem;
 }
+/* hero section */
+.hero {
+  background: url("./images/hero.svg") center/cover no-repeat;
+  height: 100vh;
+  margin-top: -5rem;
+}
