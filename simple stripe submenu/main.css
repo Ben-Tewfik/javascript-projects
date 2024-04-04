@@ -44,12 +44,12 @@
   right: 0;
   bottom: 0;
   background-color: var(--whiteClr);
-  display: none;
+  visibility: hidden;
   opacity: 0;
   transition: var(--mainTransition);
 }
 .show {
-  display: block;
+  visibility: visible;
   opacity: 1;
 }
 .close-btn {
