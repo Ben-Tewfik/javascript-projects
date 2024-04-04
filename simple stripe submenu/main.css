@@ -1,6 +1,7 @@
 :root {
   --blackClr: #222;
   --whiteClr: #fff;
+  --greyClr: #102a42;
   --mainTransition: all 0.3s ease-in-out;
 }
 
@@ -34,4 +35,31 @@
 }
 .toggle-btn:hover {
   opacity: 0.7;
+}
+/* sidebar */
+.sidebar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--whiteClr);
+  display: none;
+  opacity: 0;
+  transition: var(--mainTransition);
+}
+.show {
+  display: block;
+  opacity: 1;
+}
+.close-btn {
+  position: absolute;
+  right: 1.5rem;
+  top: 1rem;
+  font-size: 2rem;
+  color: var(--greyClr);
+  font-weight: bolder;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
