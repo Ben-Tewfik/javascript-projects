@@ -3,6 +3,8 @@ const closeBtn = document.querySelector(".close-btn");
 const toggleBtn = document.querySelector(".toggle-btn");
 const sidebarContainer = document.querySelector(".sidebar-container");
 const linksContainer = document.querySelector(".menu-container");
+const submenu = document.querySelector(".submenu");
+const linkBtns = [...document.querySelectorAll(".btn-link")];
 // sidebar toggle
 toggleBtn.addEventListener("click", () => {
   sidebarContainer.classList.add("show");
@@ -26,3 +28,14 @@ linksContainer.innerHTML = sublinks
 </article>`;
   })
   .join("");
+linkBtns.forEach(btn => {
+  if (btn.classList.contains("btn-link")) {
+    btn.addEventListener("mouseover", e => {
+      const element = e.currentTarget;
+      const position = element.getBoundingClientRect();
+      const center = (position.left + position.right) / 2;
+      submenu.classList.add("show-submenu");
+      submenu.style.left = `${center}px`;
+    });
+  }
+});
