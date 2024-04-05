@@ -129,6 +129,30 @@ body {
 .hero-img {
   display: none;
 }
+.submenu {
+  display: none;
+  background-color: var(--whiteClr);
+  position: absolute;
+  top: 4rem;
+  left: 50%;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  transform: translateX(-50%);
+}
+.submenu::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -4px;
+  left: 50%;
+  height: 0;
+  width: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid var(--whiteClr);
+  transform: translateX(-50%);
+}
+
 /* media queries */
 @media screen and (min-width: 768px) {
   .toggle-btn {
@@ -178,6 +202,10 @@ body {
   }
   .hero-info h1 {
     font-size: 4rem;
+  }
+  /* submenu */
+  .show-submenu {
+    display: block;
   }
 }
 @media screen and (min-width: 1200px) {
