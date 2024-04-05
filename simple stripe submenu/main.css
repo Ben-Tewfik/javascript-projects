@@ -166,6 +166,7 @@ body {
     display: grid;
     grid-template-columns: auto 1fr auto;
     place-items: center;
+    z-index: 2;
   }
   .nav-links {
     list-style-type: none;
