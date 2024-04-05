@@ -34,10 +34,28 @@ linkBtns.forEach(btn => {
   if (btn.classList.contains("btn-link")) {
     btn.addEventListener("mouseover", e => {
       const element = e.currentTarget;
+      const text = element.textContent;
       const position = element.getBoundingClientRect();
+      const bottom = position.bottom - 3;
       const center = (position.left + position.right) / 2;
-      submenu.classList.add("show-submenu");
-      submenu.style.left = `${center}px`;
+      const pageLinks = sublinks.find(item => item.page === text);
+      if (pageLinks) {
+        submenu.classList.add("show-submenu");
+        submenu.style.left = `${center}px`;
+        submenu.style.top = `${bottom}px`;
+        const { page, links } = pageLinks;
+        const columns = `col-${links.length}`;
+        submenu.innerHTML = `<article>
+  <h4 class="title">${page}</h4>
+  <div class="submenu-center ${columns}">
+    ${links
+      .map(({ icon, url, label }) => {
+        return `<a href="${url}"><i class="${icon}"></i>${label}</a>`;
+      })
+      .join("")}
+  </div>
+</article>`;
+      }
     });
   }
 });
