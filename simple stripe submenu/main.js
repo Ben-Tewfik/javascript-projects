@@ -4,6 +4,8 @@ const toggleBtn = document.querySelector(".toggle-btn");
 const sidebarContainer = document.querySelector(".sidebar-container");
 const linksContainer = document.querySelector(".menu-container");
 const submenu = document.querySelector(".submenu");
+const nav = document.querySelector(".nav");
+const hero = document.querySelector(".hero");
 const linkBtns = [...document.querySelectorAll(".btn-link")];
 // sidebar toggle
 toggleBtn.addEventListener("click", () => {
@@ -37,5 +39,13 @@ linkBtns.forEach(btn => {
       submenu.classList.add("show-submenu");
       submenu.style.left = `${center}px`;
     });
+  }
+});
+hero.addEventListener("mouseover", e => {
+  submenu.classList.remove("show-submenu");
+});
+nav.addEventListener("mouseover", e => {
+  if (!e.target.classList.contains("btn-link")) {
+    submenu.classList.remove("show-submenu");
   }
 });
