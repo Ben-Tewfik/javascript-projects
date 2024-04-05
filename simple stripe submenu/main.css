@@ -91,11 +91,44 @@ body {
 }
 /* hero section */
 .hero {
-  background: url("./images/hero.svg") center/cover no-repeat;
-  height: 100vh;
+  background: url("./images/hero.svg") no-repeat;
+  background-size: cover;
+  background-position: 90%;
+  min-height: 100vh;
   margin-top: -5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
 }
-
+.hero-center {
+  width: 90vw;
+  max-width: 1170px;
+  margin: auto;
+  display: grid;
+  align-items: center;
+}
+.hero-info h1 {
+  text-transform: capitalize;
+  max-width: 500px;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+.hero-info p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  max-width: 35rem;
+  color: var(--greyClr);
+}
+.get-started-btn {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.hero-img {
+  display: none;
+}
 /* media queries */
 @media screen and (min-width: 768px) {
   .toggle-btn {
