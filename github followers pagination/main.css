@@ -39,7 +39,7 @@ body {
   display: grid;
   gap: 2rem;
   max-width: 1170px;
-  margin: auto;
+  margin: auto auto 4rem;
 }
 .card {
   display: grid;
@@ -69,9 +69,43 @@ body {
   border-radius: 0.8rem;
 }
 
+/* buttons */
+.btn-container {
+  max-width: 500px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(1.9rem, 1fr));
+  grid-template-rows: 1fr;
+  gap: 0.1rem;
+  margin: 0 auto;
+}
+.page-btn {
+  background-color: var(--lightBlueClr);
+  border: none;
+  color: var(--darkClr);
+  font-weight: bold;
+  padding: 0.3rem 0;
+  border-radius: 0.2rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.next-btn,
+.prev-btn {
+  border: none;
+  font-weight: bold;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.active {
+  background-color: var(--darkBlurClr);
+  color: var(--whiteClr);
+}
 /* media queries */
 @media screen and (min-width: 576px) {
   .followers {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  .btn-container {
+    max-width: 600px;
+    gap: 0.5rem;
   }
 }
