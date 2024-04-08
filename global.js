@@ -6,7 +6,9 @@ container.innerHTML = projects
   .map(project => {
     const { title, url, image } = project;
     return `<a href="${url}" class="project" target="_blank">
-    <img src="${image}" alt="${title}" class="img" />
+    <img src="${
+      image === null ? "./global images/coming-soon.jpg" : image
+    }" alt="${title}" class="img" />
     <footer>${title}</footer>
   </a>`;
   })
