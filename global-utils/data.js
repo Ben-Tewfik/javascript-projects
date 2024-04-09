@@ -39,6 +39,11 @@ const projects = [
     url: "./simple stripe submenu/index.html",
     image: null,
   },
+  {
+    title: "wikipedia",
+    url: "./wikipedia/index.html",
+    image: null,
+  },
   // {
   //   title: "",
   //   url: "",
