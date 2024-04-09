@@ -14,12 +14,12 @@ form.addEventListener("submit", e => {
 });
 
 const fetchResults = async searchValue => {
+  results.innerHTML = `<div class='loading'></div>`;
   try {
     const response = await fetch(`${URL}${searchValue}`);
     const {
       query: { search },
     } = await response.json();
-    console.log(search);
     displayResults(search);
   } catch (error) {
     results.innerHTML = "<p class='error'>There was ans error...</p>";
