@@ -76,7 +76,15 @@ body {
 .btn:hover {
   color: var(--darkClr);
 }
-
+.results {
+  padding: 2rem 0;
+}
+.error {
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 500;
+  color: tomato;
+}
 /* media */
 @media screen and (min-width: 678px) {
   .form {
