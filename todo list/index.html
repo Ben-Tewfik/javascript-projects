@@ -15,6 +15,41 @@
     <link rel="stylesheet" href="./main.css" />
   </head>
   <body>
+    <main class="todo">
+      <div class="todo-title-container">
+        <h2 class="todo-title">
+          <i class="fa-solid fa-rocket todo-title-icon"></i> <span>to</span>do
+        </h2>
+      </div>
+      <div class="todo-list-container">
+        <form class="form">
+          <input type="text" class="form-input" />
+          <button class="create-btn" type="submit">
+            create <i class="fa-solid fa-plus"></i>
+          </button>
+        </form>
+        <div class="container">
+          <div class="container-created-tasks">
+            <h4>created tasks</h4>
+            <p>0</p>
+          </div>
+          <div class="container-completed-tasks">
+            <h4>completed</h4>
+            <p>0</p>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="list">
+          <div class="empty-list">
+            <i class="fa-regular fa-file-lines empty-list-icon"></i>
+            <p class="empty-list-text">
+              you don't have tasks registered yet create tasks and organize your
+              to-do items
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
     <script type="module" src="./main.js"></script>
   </body>
 </html>
