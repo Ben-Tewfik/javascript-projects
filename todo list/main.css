@@ -1,4 +1,5 @@
-:root {
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+root {
   --purpleClr: #8284fa;
   --darkPurpleClr: #5e60ce;
   --blueClr: #4ea8de;
@@ -11,4 +12,8 @@
   --greyClr-6: #d9d9d9;
   --greyClr-7: #f2f2f2;
   --redClr: #e25858;
+}
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.4;
 }
