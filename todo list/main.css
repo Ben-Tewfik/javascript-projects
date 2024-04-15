@@ -22,12 +22,14 @@ body {
 }
 .todo {
   width: 90vw;
-  min-height: 80vw;
   margin: 5rem auto;
 }
 .todo-title-container {
   background-color: var(--greyClr-700);
   padding: 3rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  position: relative;
 }
 .todo-title {
   color: var(--darkPurpleClr);
@@ -39,16 +41,16 @@ body {
 }
 .todo-list-container {
   background-color: var(--greyClr-500);
-  position: relative;
   padding: 1rem;
   padding-top: 3rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 .form {
   position: absolute;
-  top: -10%;
-  left: 9.5%;
-  transform: translateY(39%);
-  width: 80%;
+  bottom: -12%;
+  left: 7%;
+  width: 86%;
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 6px;
