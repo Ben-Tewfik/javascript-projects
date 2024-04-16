@@ -20,7 +20,16 @@ form.addEventListener("submit", e => {
     </button>
   </div>`;
     container.appendChild(element);
+    // increment created tasks
     createdTasks++;
     tasksCreated.textContent = createdTasks;
+    // delete btn
+    const deleteBtn = element.querySelector(".delete-btn");
+    deleteBtn.addEventListener("click", e => {
+      const item = e.currentTarget.parentElement.parentElement;
+      container.removeChild(item);
+      createdTasks--;
+      tasksCreated.textContent = createdTasks;
+    });
   }
 });
