@@ -44,6 +44,16 @@ const projects = [
     url: "./wikipedia/index.html",
     image: null,
   },
+  {
+    title: "color flipper",
+    url: "./color flipper/index.html",
+    image: null,
+  },
+  {
+    title: "todo list",
+    url: "./todo list/index.html",
+    image: null,
+  },
   // {
   //   title: "",
   //   url: "",
